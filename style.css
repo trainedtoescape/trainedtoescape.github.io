@@ -126,6 +126,13 @@ h3 { font-size: 1.1rem; }
 }
 .platforms { font-family: var(--mono); font-size: .85rem; color: var(--ink-dim); }
 
+.cam-label {
+  position: absolute; left: clamp(16px, 4vw, 40px); bottom: 20px;
+  font-family: var(--mono); font-size: .75rem; letter-spacing: .1em;
+  color: rgba(236,230,246,.75);
+}
+.cam-label .rec { color: #ff4a4a; }
+
 /* Text socket */
 .socket-section { background: #000; }
 .kicker { font-family: var(--mono); color: var(--ink-dim); font-size: .8rem; letter-spacing: .1em; margin: 0 0 16px; }
@@ -205,6 +212,12 @@ h3 { font-size: 1.1rem; }
 .person h3 { margin: 0; }
 .person .role { font-family: var(--mono); font-size: .78rem; color: var(--amber); margin: 2px 0 6px; }
 .person p { margin: 0; color: var(--ink-dim); font-size: .95rem; }
+.monogram {
+  width: 72px; height: 72px; border-radius: 50%; flex: none;
+  display: grid; place-items: center;
+  background: #000; border: 1px solid rgba(63,193,232,.55);
+  font-family: var(--mono); font-size: 1.4rem; color: var(--cyan);
+}
 .person.you { border-color: rgba(63,193,232,.55); }
 .person.you .role { color: var(--cyan); }
 

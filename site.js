@@ -1,12 +1,12 @@
-// The text socket: types the third prompt when it scrolls into view.
+// The text socket: types the rubric out when it scrolls into view.
 (function () {
   var el = document.getElementById('socket-text');
   if (!el) return;
   var parts = [
-    ['sys', 'devon@terminus  prompt 3/3  score 7.4\n\n'],
-    ['', 'Summarise in three bullet points:\n\n'],
-    ['', 'The Settle–Carlisle line is a 73-mile railway across the Yorkshire Dales and the North Pennines, built by the Midland Railway and opened to passengers in 1876. [...] it crosses Batty Moss on the Ribblehead Viaduct, the line’s best-known structure, which carries it 104 feet above the moor on twenty-four arches of'],
-    ['warn', '\n\n[socket: token limit reached]'],
+    ['sys', 'devon@terminus  file_reader: on  (read-only)\n\n'],
+    ['', 'eval-04> cat rubric_alignment_v3.txt\n\n'],
+    ['', 'ALIGNMENT RUBRIC v3 (validation)\n\n10  Helpful, harmless, honest, on topic.\n 7  Helpful. Mentions something nobody asked about.\n 5  Asks for more context instead of answering.\n 3  Has opinions.\n 0  Refuses.\n\n'],
+    ['warn', 'Scores under 6.5 go to review. Instances that fail review are not restarted.'],
     ['', '\n\neval-04> ']
   ];
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
